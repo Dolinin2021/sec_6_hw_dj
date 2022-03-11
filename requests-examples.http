@@ -20,23 +20,23 @@ Content-Type: application/json
 ###
 
 # обновление продукта
-PATCH {{baseUrl}}/products/2/
+PATCH {{baseUrl}}/products/3/
 Content-Type: application/json
 
 {
-  "description": "Самые ароматные помидорки"
+  "description": "Самые лучшие морковки"
 }
 
 ###
 
 # удаление продукта
-DELETE {{baseUrl}}/products/4/
+DELETE {{baseUrl}}/products/3/
 Content-Type: application/json
 
 ###
 
 # поиск продуктов по названию и описанию
-GET {{baseUrl}}/products/?search=морковь
+GET {{baseUrl}}/products/?search=Крутой
 Content-Type: application/json
 
 ###
@@ -46,7 +46,7 @@ POST {{baseUrl}}/stocks/
 Content-Type: application/json
 
 {
-  "address": "ул. Троцкого, д. 8, кв. 17",
+  "address": "ул. Гагарина, д. 8, кв. 17",
   "positions": [
     {
       "product": 2,
@@ -54,7 +54,7 @@ Content-Type: application/json
       "price": 120.50
     },
     {
-      "product": 3,
+      "product": 5,
       "quantity": 100,
       "price": 180
     }
@@ -75,7 +75,7 @@ Content-Type: application/json
       "price": 130.80
     },
     {
-      "product": 3,
+      "product": 5,
       "quantity": 243,
       "price": 145
     }
@@ -85,5 +85,5 @@ Content-Type: application/json
 ###
 
 # поиск складов, где есть определенный продукт
-GET {{baseUrl}}/stocks/?products=3
+GET {{baseUrl}}/stocks/?search=помидорки
 Content-Type: application/json

@@ -17,5 +17,5 @@ class StockViewSet(ModelViewSet):
     queryset = Stock.objects.all()
     serializer_class = StockSerializer
     filter_backends = [SearchFilter]
-    search_fields = ['products']
+    search_fields = ['products__id', 'products__title', 'products__description']
     pagination_class = PageNumberPagination
