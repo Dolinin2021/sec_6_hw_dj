@@ -18,4 +18,3 @@ class StockViewSet(ModelViewSet):
     serializer_class = StockSerializer
     filter_backends = [SearchFilter]
     search_fields = ['products__id', 'products__title', 'products__description']
-    pagination_class = PageNumberPagination
