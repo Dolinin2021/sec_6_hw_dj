@@ -7,8 +7,8 @@ POST {{baseUrl}}/products/
 Content-Type: application/json
 
 {
-  "title": "Гранат",
-  "description": "Крутой Гранат на рынке"
+  "title": "Ананас",
+  "description": "Крутой Ананас на рынке"
 }
 
 ###
@@ -46,10 +46,10 @@ POST {{baseUrl}}/stocks/
 Content-Type: application/json
 
 {
-  "address": "ул. Гагарина, д. 8, кв. 17",
+  "address": "ул. Рокосовского, д. 8, кв. 17",
   "positions": [
     {
-      "product": 2,
+      "product": 6,
       "quantity": 250,
       "price": 120.50
     },
@@ -85,5 +85,5 @@ Content-Type: application/json
 ###
 
 # поиск складов, где есть определенный продукт
-GET {{baseUrl}}/stocks/?products=5
+GET {{baseUrl}}/stocks/?products=6
 Content-Type: application/json
