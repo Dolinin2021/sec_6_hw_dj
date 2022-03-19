@@ -1,4 +1,3 @@
-from django.db.models import Q
 from rest_framework.filters import SearchFilter
 from rest_framework.viewsets import ModelViewSet
 
@@ -18,7 +17,8 @@ class StockSearchFilter(SearchFilter):
         queryset = super().filter_queryset(request, queryset, view)
         param = request.query_params.get('products')
         if param:
-            print('True')
+            result = Stock.objects.filter(products=param)
+            print(result)
         else:
             return queryset
 
